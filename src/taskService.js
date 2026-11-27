@@ -1,4 +1,11 @@
-function validateTitle(title) { if (typeof title !== 'string' || !title.trim()) {const error = new Error('title debe ser texto no vacío');error.status = 400;throw error;}return title.trim();}
+function validateTitle(title) {
+  if (typeof title !== 'string' || !title.trim()) {
+    const error = new Error('title debe ser texto no vacío');
+    error.status = 400;
+    throw error;
+  }
+  return title.trim();
+}
 function createService(repository) {
   return {
     list: () => repository.list(),
